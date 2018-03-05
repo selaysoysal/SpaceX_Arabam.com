@@ -44,7 +44,7 @@ class LaunchDetailViewController: UIViewController {
         do {
             let myHTMLString = try String(contentsOf: myURL, encoding: .ascii)
             print("HTML : \(myHTMLString)")
-            webView.loadHTMLString(myHTMLString, baseURL: myURL)
+          //  webView.loadHTMLString(myHTMLString, baseURL: myURL)
         } catch let error {
             print("Error: \(error)")
         }

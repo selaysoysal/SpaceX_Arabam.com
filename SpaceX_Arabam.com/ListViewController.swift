@@ -8,16 +8,16 @@
 
 import UIKit
 
-class ListViewController: ViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource {
+class ListViewController: ViewController,UICollectionViewDelegate,UICollectionViewDataSource,UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource {
 
     @IBOutlet weak var filterTableView: UITableView!
-    //@IBOutlet weak var filterButton: UIButton!
     @IBOutlet weak var doneButton: UIButton!
-  //  @IBOutlet weak var clearButton: UIButton!
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var blurView: UIVisualEffectView!
     @IBOutlet weak var pickerViewContainerView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var clearButton: UIBarButtonItem!
+    @IBOutlet weak var filterButton: UIBarButtonItem!
     
     var filterArray = ["Filter by Rocket Type", "Filter by Name", "Filter by Launch Site", "Filter by Launch Year"]
     var pickerArray = Array<String>()
@@ -46,11 +46,11 @@ class ListViewController: ViewController,UICollectionViewDelegate,UICollectionVi
         self.pickerView.delegate = self
         self.pickerView.dataSource = self
         
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .vertical
     
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: (self.view.frame.size.width/3.2), height:(self.view.frame.size.width/3.2)*2)
+        self.collectionView.collectionViewLayout = layout;
         
-    //    self.clearButton.isHidden = true
         // Do any additional setup after loading the view.
     }
 
@@ -75,7 +75,6 @@ class ListViewController: ViewController,UICollectionViewDelegate,UICollectionVi
     @IBAction func filterRockets(_ sender: Any)
     {
         self.blurView.isHidden = false
-       // self.clearButton.isHidden = false
     }
     
     func loadData()
@@ -191,6 +190,12 @@ class ListViewController: ViewController,UICollectionViewDelegate,UICollectionVi
         }
     }
     
+    func collectionView(collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
+        return 1.0
+    }
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "rocketCell",
@@ -207,6 +212,7 @@ class ListViewController: ViewController,UICollectionViewDelegate,UICollectionVi
         return cell
     }
     
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -216,11 +222,7 @@ class ListViewController: ViewController,UICollectionViewDelegate,UICollectionVi
         navigationController?.pushViewController(vc,
                                                  animated: true)
     }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
-        
-        return CGSize(width: self.collectionView.bounds.width/2.0, height: (self.collectionView.bounds.width/2.01)*1.55)
-    }
+
     
     //MARK: pickerView
     

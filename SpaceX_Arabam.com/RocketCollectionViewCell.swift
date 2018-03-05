@@ -20,7 +20,7 @@ class RocketCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        self.contentView.layer.borderWidth = 0.5
+        self.contentView.layer.borderWidth = 0.8
         self.contentView.layer.borderColor = UIColor.lightGray.cgColor
     }
     
