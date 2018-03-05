@@ -13,6 +13,15 @@
 		66E2CC6A204B30EC008F3856 /* SpaceX_Arabam_com.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 66E2CC68204B30EC008F3856 /* SpaceX_Arabam_com.xcdatamodeld */; };
 		66E2CC6C204B30EC008F3856 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66E2CC6B204B30EC008F3856 /* Assets.xcassets */; };
 		66E2CC6F204B30EC008F3856 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66E2CC6D204B30EC008F3856 /* LaunchScreen.storyboard */; };
+		66E2CC77204B3E23008F3856 /* Launches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E2CC76204B3E23008F3856 /* Launches.swift */; };
+		66E2CC79204B4008008F3856 /* Rocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E2CC78204B4008008F3856 /* Rocket.swift */; };
+		66E2CC7B204B4137008F3856 /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E2CC7A204B4137008F3856 /* Links.swift */; };
+		66E2CC7D204B41AA008F3856 /* Launch_Site.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E2CC7C204B41AA008F3856 /* Launch_Site.swift */; };
+		66E2CC7F204B497E008F3856 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E2CC7E204B497E008F3856 /* ListViewController.swift */; };
+		66E2CC81204B49B0008F3856 /* APIAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E2CC80204B49B0008F3856 /* APIAdapter.swift */; };
+		66E2CC83204B514D008F3856 /* RocketCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E2CC82204B514D008F3856 /* RocketCollectionViewCell.swift */; };
+		66E2CC85204C1F8A008F3856 /* HeaderViewCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E2CC84204C1F8A008F3856 /* HeaderViewCollectionReusableView.swift */; };
+		66E2CC89204C8CB8008F3856 /* LaunchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E2CC88204C8CB8008F3856 /* LaunchDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +33,15 @@
 		66E2CC6B204B30EC008F3856 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66E2CC6E204B30EC008F3856 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		66E2CC70204B30EC008F3856 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66E2CC76204B3E23008F3856 /* Launches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launches.swift; sourceTree = "<group>"; };
+		66E2CC78204B4008008F3856 /* Rocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rocket.swift; sourceTree = "<group>"; };
+		66E2CC7A204B4137008F3856 /* Links.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
+		66E2CC7C204B41AA008F3856 /* Launch_Site.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launch_Site.swift; sourceTree = "<group>"; };
+		66E2CC7E204B497E008F3856 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		66E2CC80204B49B0008F3856 /* APIAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIAdapter.swift; sourceTree = "<group>"; };
+		66E2CC82204B514D008F3856 /* RocketCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketCollectionViewCell.swift; sourceTree = "<group>"; };
+		66E2CC84204C1F8A008F3856 /* HeaderViewCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewCollectionReusableView.swift; sourceTree = "<group>"; };
+		66E2CC88204C8CB8008F3856 /* LaunchDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +76,16 @@
 			children = (
 				66E2CC61204B30EC008F3856 /* AppDelegate.swift */,
 				66E2CC63204B30EC008F3856 /* ViewController.swift */,
+				66E2CC80204B49B0008F3856 /* APIAdapter.swift */,
+				66E2CC7E204B497E008F3856 /* ListViewController.swift */,
 				66E2CC65204B30EC008F3856 /* Main.storyboard */,
+				66E2CC88204C8CB8008F3856 /* LaunchDetailViewController.swift */,
+				66E2CC84204C1F8A008F3856 /* HeaderViewCollectionReusableView.swift */,
+				66E2CC82204B514D008F3856 /* RocketCollectionViewCell.swift */,
+				66E2CC76204B3E23008F3856 /* Launches.swift */,
+				66E2CC7C204B41AA008F3856 /* Launch_Site.swift */,
+				66E2CC78204B4008008F3856 /* Rocket.swift */,
+				66E2CC7A204B4137008F3856 /* Links.swift */,
 				66E2CC6B204B30EC008F3856 /* Assets.xcassets */,
 				66E2CC6D204B30EC008F3856 /* LaunchScreen.storyboard */,
 				66E2CC70204B30EC008F3856 /* Info.plist */,
@@ -139,9 +166,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66E2CC77204B3E23008F3856 /* Launches.swift in Sources */,
+				66E2CC7B204B4137008F3856 /* Links.swift in Sources */,
 				66E2CC64204B30EC008F3856 /* ViewController.swift in Sources */,
+				66E2CC81204B49B0008F3856 /* APIAdapter.swift in Sources */,
+				66E2CC89204C8CB8008F3856 /* LaunchDetailViewController.swift in Sources */,
+				66E2CC83204B514D008F3856 /* RocketCollectionViewCell.swift in Sources */,
+				66E2CC7D204B41AA008F3856 /* Launch_Site.swift in Sources */,
 				66E2CC62204B30EC008F3856 /* AppDelegate.swift in Sources */,
+				66E2CC79204B4008008F3856 /* Rocket.swift in Sources */,
+				66E2CC7F204B497E008F3856 /* ListViewController.swift in Sources */,
 				66E2CC6A204B30EC008F3856 /* SpaceX_Arabam_com.xcdatamodeld in Sources */,
+				66E2CC85204C1F8A008F3856 /* HeaderViewCollectionReusableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +317,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 85AAQ274JS;
 				INFOPLIST_FILE = SpaceX_Arabam.com/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "selay.SpaceX-Arabam-com";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -296,6 +333,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 85AAQ274JS;
 				INFOPLIST_FILE = SpaceX_Arabam.com/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "selay.SpaceX-Arabam-com";
 				PRODUCT_NAME = "$(TARGET_NAME)";
