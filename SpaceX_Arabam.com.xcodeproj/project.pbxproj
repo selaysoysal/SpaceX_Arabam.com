@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		667FF389205128E8007B0870 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667FF388205128E8007B0870 /* LaunchViewController.swift */; };
 		66E2CC62204B30EC008F3856 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E2CC61204B30EC008F3856 /* AppDelegate.swift */; };
 		66E2CC64204B30EC008F3856 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E2CC63204B30EC008F3856 /* ViewController.swift */; };
 		66E2CC67204B30EC008F3856 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66E2CC65204B30EC008F3856 /* Main.storyboard */; };
@@ -20,11 +21,11 @@
 		66E2CC7F204B497E008F3856 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E2CC7E204B497E008F3856 /* ListViewController.swift */; };
 		66E2CC81204B49B0008F3856 /* APIAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E2CC80204B49B0008F3856 /* APIAdapter.swift */; };
 		66E2CC83204B514D008F3856 /* RocketCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E2CC82204B514D008F3856 /* RocketCollectionViewCell.swift */; };
-		66E2CC85204C1F8A008F3856 /* HeaderViewCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E2CC84204C1F8A008F3856 /* HeaderViewCollectionReusableView.swift */; };
 		66E2CC89204C8CB8008F3856 /* LaunchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E2CC88204C8CB8008F3856 /* LaunchDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		667FF388205128E8007B0870 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		66E2CC5E204B30EC008F3856 /* SpaceX_Arabam.com.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceX_Arabam.com.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66E2CC61204B30EC008F3856 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66E2CC63204B30EC008F3856 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,7 +41,6 @@
 		66E2CC7E204B497E008F3856 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		66E2CC80204B49B0008F3856 /* APIAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIAdapter.swift; sourceTree = "<group>"; };
 		66E2CC82204B514D008F3856 /* RocketCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketCollectionViewCell.swift; sourceTree = "<group>"; };
-		66E2CC84204C1F8A008F3856 /* HeaderViewCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewCollectionReusableView.swift; sourceTree = "<group>"; };
 		66E2CC88204C8CB8008F3856 /* LaunchDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,8 +87,8 @@
 				66E2CC80204B49B0008F3856 /* APIAdapter.swift */,
 				66E2CC7E204B497E008F3856 /* ListViewController.swift */,
 				66E2CC65204B30EC008F3856 /* Main.storyboard */,
+				667FF388205128E8007B0870 /* LaunchViewController.swift */,
 				66E2CC88204C8CB8008F3856 /* LaunchDetailViewController.swift */,
-				66E2CC84204C1F8A008F3856 /* HeaderViewCollectionReusableView.swift */,
 				66E2CC82204B514D008F3856 /* RocketCollectionViewCell.swift */,
 				66E2CC76204B3E23008F3856 /* Launches.swift */,
 				66E2CC7C204B41AA008F3856 /* Launch_Site.swift */,
@@ -181,11 +181,11 @@
 				66E2CC89204C8CB8008F3856 /* LaunchDetailViewController.swift in Sources */,
 				66E2CC83204B514D008F3856 /* RocketCollectionViewCell.swift in Sources */,
 				66E2CC7D204B41AA008F3856 /* Launch_Site.swift in Sources */,
+				667FF389205128E8007B0870 /* LaunchViewController.swift in Sources */,
 				66E2CC62204B30EC008F3856 /* AppDelegate.swift in Sources */,
 				66E2CC79204B4008008F3856 /* Rocket.swift in Sources */,
 				66E2CC7F204B497E008F3856 /* ListViewController.swift in Sources */,
 				66E2CC6A204B30EC008F3856 /* SpaceX_Arabam_com.xcdatamodeld in Sources */,
-				66E2CC85204C1F8A008F3856 /* HeaderViewCollectionReusableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

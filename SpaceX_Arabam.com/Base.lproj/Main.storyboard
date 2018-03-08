@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kDa-A9-Abj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="P21-s4-K7K">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -18,13 +18,52 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Launch View Controller-->
+        <scene sceneID="Pop-Cf-bJw">
+            <objects>
+                <viewController id="P21-s4-K7K" customClass="LaunchViewController" customModule="SpaceX_Arabam_com" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="War-oT-WSv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Starsinthesky" translatesAutoresizingMaskIntoConstraints="NO" id="pff-cz-lWZ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="12 1" translatesAutoresizingMaskIntoConstraints="NO" id="LGY-w8-Fif">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="py9-J1-KoI" firstAttribute="trailing" secondItem="LGY-w8-Fif" secondAttribute="trailing" id="4B1-QF-82J"/>
+                            <constraint firstItem="py9-J1-KoI" firstAttribute="bottom" secondItem="pff-cz-lWZ" secondAttribute="bottom" id="GOp-23-0Qo"/>
+                            <constraint firstItem="LGY-w8-Fif" firstAttribute="top" secondItem="py9-J1-KoI" secondAttribute="top" id="PLH-UU-LNZ"/>
+                            <constraint firstItem="py9-J1-KoI" firstAttribute="bottom" secondItem="LGY-w8-Fif" secondAttribute="bottom" id="Z1k-Oz-ZW5"/>
+                            <constraint firstItem="pff-cz-lWZ" firstAttribute="top" secondItem="War-oT-WSv" secondAttribute="top" id="fFv-20-oMi"/>
+                            <constraint firstItem="LGY-w8-Fif" firstAttribute="leading" secondItem="py9-J1-KoI" secondAttribute="leading" id="h2V-TI-rhP"/>
+                            <constraint firstItem="py9-J1-KoI" firstAttribute="trailing" secondItem="pff-cz-lWZ" secondAttribute="trailing" id="kNJ-Sn-gSC"/>
+                            <constraint firstItem="pff-cz-lWZ" firstAttribute="leading" secondItem="py9-J1-KoI" secondAttribute="leading" id="tz9-VK-RdR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="py9-J1-KoI"/>
+                    </view>
+                    <connections>
+                        <segue destination="kDa-A9-Abj" kind="show" identifier="launch" animates="NO" action="showDetailViewController:sender:" id="e8c-aa-bBf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yJj-lZ-EyS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1524" y="117"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="XYM-xs-QNu">
             <objects>
-                <navigationController id="kDa-A9-Abj" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavigationView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kDa-A9-Abj" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Fjt-nI-XH8"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="enZ-VG-ZFX">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.9890020489692688" green="0.47302544116973877" blue="0.01283128559589386" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -188,7 +227,8 @@
                                         </view>
                                         <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="31z-DL-5Bc">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="176"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="176" id="TI4-U0-QWc"/>
                                             </constraints>
@@ -199,8 +239,10 @@
                                                     <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dsK-RQ-Vz0" id="U4g-uF-jfY">
                                                         <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                                         <autoresizingMask key="autoresizingMask"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </tableViewCellContentView>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </tableViewCell>
                                             </prototypes>
                                         </tableView>
@@ -275,6 +317,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EO9-4d-VlU">
                                 <rect key="frame" x="40" y="171" width="240" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -284,6 +327,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k1E-uu-zph">
                                 <rect key="frame" x="40" y="209" width="240" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -327,7 +371,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="12 1" width="2413" height="2493"/>
         <image name="713" width="5000" height="5000"/>
+        <image name="Starsinthesky" width="2880" height="1844"/>
         <image name="placeholder" width="100" height="97"/>
     </resources>
 </document>

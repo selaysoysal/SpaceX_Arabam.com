@@ -25,6 +25,15 @@ class LaunchDetailViewController: UIViewController, SFSafariViewControllerDelega
         super.viewDidLoad()
         print(index)
         
+        
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture))
+        swipeRight.direction = UISwipeGestureRecognizerDirection.right
+        self.view.addGestureRecognizer(swipeRight)
+        
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture))
+        swipeLeft.direction = UISwipeGestureRecognizerDirection.left
+        self.view.addGestureRecognizer(swipeLeft)
+        
         self.updateUI()
         // Do any additional setup after loading the view.
     }
@@ -35,16 +44,44 @@ class LaunchDetailViewController: UIViewController, SFSafariViewControllerDelega
         // Dispose of any resources that can be recreated.
     }
     
+    
+    @objc func respondToSwipeGesture(gesture: UIGestureRecognizer) {
+        
+        if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+            switch swipeGesture.direction {
+            case UISwipeGestureRecognizerDirection.right:
+                print("Swiped right")
+                if index != 0 {
+                    index -= 1
+                } else {
+                    return
+                }
+            case UISwipeGestureRecognizerDirection.left:
+                print("Swiped left")
+                if index == launches.count-1{
+                    return
+                } else {
+                    index += 1
+                }
+            default:
+                break
+            }
+             updateUI()
+        }
+    }
+    
     func safariViewControllerDidFinish(_ controller: SFSafariViewController)
     {
         controller.dismiss(animated: true, completion: nil)
     }
     
+    
+    
     func updateUI()
     {
         
-        videoLink.titleLabel?.text = "Watch me on Youtube!"
-        articleLink.titleLabel?.text =  "Read about me!"
+        videoLink.setTitle("Watch me on Youtube!", for: UIControlState.normal)
+        articleLink.setTitle("Read about me!", for: UIControlState.normal)
        
         titleLable.text = launches[index].rocket?.rocket_name
         titleLable.font = UIFont.boldSystemFont(ofSize: 17)

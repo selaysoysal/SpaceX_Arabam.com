@@ -54,7 +54,7 @@ class ListViewController: ViewController,UICollectionViewDelegate,UICollectionVi
         
         sortButton = UIBarButtonItem(image: UIImage(named: "descendant"),style: .plain, target:self, action: #selector(sortRockets))
         
-        clearButton = UIBarButtonItem(image: UIImage(named: "rubbish-bin"), style: .plain, target: self, action: #selector(clearFilters))
+        clearButton = UIBarButtonItem(image: UIImage(named: "empty-container"), style: .plain, target: self, action: #selector(clearFilters))
 
         self.navigationItem.rightBarButtonItems = [sortButton,filterButton]
         
@@ -103,6 +103,7 @@ class ListViewController: ViewController,UICollectionViewDelegate,UICollectionVi
         self.filterData()
         self.isDataFiltered = true
         self.pickerViewContainerView.isHidden = true
+        self.filterTableView.isHidden = false
         self.blurView.isHidden = true
     }
     
@@ -168,6 +169,7 @@ class ListViewController: ViewController,UICollectionViewDelegate,UICollectionVi
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "filterCell")!
         cell.textLabel?.text = filterArray[indexPath.row]
+        cell.textLabel?.textColor = UIColor.white
         return cell
     }
     
@@ -175,6 +177,7 @@ class ListViewController: ViewController,UICollectionViewDelegate,UICollectionVi
         
         self.pickerArray.removeAll()
         var filterSet = Set<String>()
+        self.filterTableView.isHidden = true
         switch filterArray[indexPath.row] {
             case "Filter by Rocket Type":
                 for i in launches{
@@ -196,7 +199,7 @@ class ListViewController: ViewController,UICollectionViewDelegate,UICollectionVi
                 break
         }
         self.filterType = filterArray[indexPath.row]
-        self.pickerArray = Array(filterSet)
+        self.pickerArray = Array(filterSet).sorted()
         self.pickerView.reloadAllComponents()
         
         self.pickerViewContainerView.isHidden = false

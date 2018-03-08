@@ -6,11 +6,11 @@
     },
     {
       "idiom" : "universal",
-      "filename" : "rubbish-bin.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "empty-container.png",
       "scale" : "3x"
     }
   ],
